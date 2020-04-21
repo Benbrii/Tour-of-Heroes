@@ -1,0 +1,15 @@
+<h2>Messages</h2>
+
+<div *ngIf="messageService.messages.length">
+
+    <button class="clear" (click)="messageService.clear()">Clear</button>
+    <div *ngFor='let message of messageService.messages'>
+        {{ message }}
+    </div>
+
+</div>
+
+<div *ngIf="messageService.messages.length === 0">
+    <p>No more message</p>
+    <p>Click on a Hero to display their details</p>
+</div>
